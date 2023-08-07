@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View } from 'react-native'
+import { grey600 } from './assets/constants/colors'
+import WorkoutScreen from './components/screens/workout-screen/WorkoutScreen'
 
-import { StyleSheet, Text, View } from 'react-native'
-
-export default function App() {
+const App = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text>Testing Husky</Text>
-      <StatusBar style='auto' />
+      <WorkoutScreen />
     </View>
   )
 }
@@ -14,8 +13,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: grey600
   }
 })
+
+export default App
