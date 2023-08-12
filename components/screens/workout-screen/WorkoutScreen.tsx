@@ -1,5 +1,6 @@
 import { Text, View } from 'react-native'
 import { Content } from '../../templates'
+import { ScreenNav } from '../../organisms'
 
 const WorkoutScreen = (): JSX.Element => {
   return (
@@ -9,6 +10,7 @@ const WorkoutScreen = (): JSX.Element => {
           <Text>Main content area</Text>
         </View>
       </Content>
+      <ScreenNav />
     </>
   )
 }
