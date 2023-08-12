@@ -16,7 +16,7 @@ jobs:
       - name: Move issue to In Progress
         uses: actions/github-script@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.ACTION_TOKEN }}
           script: |
             const branchName = github.context.ref;
             const issueNumberMatches = branchName.match(/#(\d+)/);
@@ -31,7 +31,7 @@ jobs:
               });
               
               // Find the project ID and column ID of the "In Progress" column
-              const projectID = projects.data.find(project => project.name === "Your Project Name").id;
+              const projectID = projects.data.find(project => project.name === "StrengthJournal").id;
               const columns = await github.projects.listColumns({
                 project_id: projectID
               });
