@@ -29,6 +29,7 @@ const NavIcon = ({
           }
           size={38}
           color={active ? primary : grey500}
+          testID='icon-component'
         />
         <Text style={{ color: active ? primary : grey500 }}>{text}</Text>
       </View>

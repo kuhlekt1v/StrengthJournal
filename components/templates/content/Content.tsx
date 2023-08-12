@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native'
 
 interface IContent {
-  testID: string
+  testID?: string
   children: React.ReactNode
 }
 
