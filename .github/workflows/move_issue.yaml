@@ -1,0 +1,52 @@
+name: Move Issue to In Progress
+
+on:
+  push:
+    branches:
+      - '*' # Trigger on all branch pushes, you can refine this if needed
+
+jobs:
+  move-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Move issue to In Progress
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const branchName = github.context.ref;
+            const issueNumberMatches = branchName.match(/#(\d+)/);
+
+            if (issueNumberMatches) {
+              const issueNumber = issueNumberMatches[1]; // Extract the issue number
+              
+              // Get the list of projects for the repository
+              const projects = await github.projects.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              });
+              
+              // Find the project ID and column ID of the "In Progress" column
+              const projectID = projects.data.find(project => project.name === "Your Project Name").id;
+              const columns = await github.projects.listColumns({
+                project_id: projectID
+              });
+              const columnID = columns.data.find(column => column.name === "In Progress").id;
+              
+              // Get the issue card ID
+              const cards = await github.projects.listCards({
+                column_id: columnID
+              });
+              const cardID = cards.data.find(card => card.content_url.includes(`issues/${issueNumber}`)).id;
+              
+              // Move the issue card to the "In Progress" column
+              await github.projects.moveCard({
+                card_id: cardID,
+                position: 'top',
+                column_id: columnID
+              });
+            }
