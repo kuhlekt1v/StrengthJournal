@@ -1,0 +1,7 @@
+export const primary = '#85E099'
+export const charcoal = '#383838'
+export const secondary = '#C7DDCC'
+export const grey700 = '#101828'
+export const grey600 = '#667085'
+export const grey500 = '#98A2B3'
+export const grey400 = '#D0D5DD'
