@@ -1,0 +1,26 @@
+name: Move Issue to In Progress Column
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  move-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Move Issue to In Progress Column
+        env:
+          GITHUB_TOKEN: ${{ secrets.GHPROJECT_TOKEN }}
+        run: |
+          ISSUE_NUMBER=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues?state=open&labels=your-label" -H "Authorization: Bearer ${GHPROJECT_TOKEN}" | jq -r '.[] | select(.title == "Your Issue Title") | .number')
+          if [[ -n "$ISSUE_NUMBER" ]]; then
+            COLUMN_ID=$(curl -s "https://api.github.com/projects/columns/column-id/cards" -H "Authorization: Bearer ${GHPROJECT_TOKEN}" | jq -r '.[0].column_id')
+            if [[ -n "$COLUMN_ID" ]]; then
+              curl -X POST "https://api.github.com/projects/columns/cards/card-id/moves" -H "Authorization: Bearer ${GHPROJECT_TOKEN}" -d '{"position": "top", "column_id": "'"$COLUMN_ID"'"}'
+            fi
+          fi
