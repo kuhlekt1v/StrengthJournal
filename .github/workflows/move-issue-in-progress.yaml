@@ -1,6 +1,12 @@
 name: Move Issue To In Progress
 
-on: create
+on:
+  create:
+    branches:
+      - '*'
+  push:
+    branches:
+      - '*'
 env:
   GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   OWNER: 'kuhlekt1v'
