@@ -14,7 +14,7 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --write",
-      "test --bail"
+      "jest --bail --findRelatedTests"
     ]
   },
   "dependencies": {
