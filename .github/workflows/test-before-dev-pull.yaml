@@ -1,0 +1,19 @@
+name: Test Pull Request Before Merge With Dev
+
+on:
+  pull_request:
+    branches:
+      - 'dev'
+
+jobs:
+  Test-Pull-Request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+      - uses: actions/checkout@v2
+
+      - name: npm ci, build, & test
+        run: |
+          npm ci
+          npm run build --if-present
+          npm test
