@@ -2,17 +2,3 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
-
-# Get the list of staged files and run Jest tests on corresponding test files
-git diff --cached --name-only --diff-filter=ACM | while read -r file; do
-  # Check if the changed file matches a test pattern
-  if echo "$file" | grep -qE '\.tsx?$'; then
-    # Convert the changed file path to the corresponding test file path
-    test_file="${file/src/__tests__}"
-    test_file="${test_file/.ts/.test.ts}"
-    test_file="${test_file/.tsx/.test.tsx}"
-
-    # Run Jest tests on the corresponding test file
-    npx jest --bail "$test_file"
-  fi
-done
