@@ -1,5 +1,7 @@
 const config = {
   preset: 'jest-expo',
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
   setupFilesAfterEnv: [
     '@testing-library/jest-native/extend-expect',
     'jest-styled-components'
