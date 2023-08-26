@@ -15,9 +15,10 @@ interface IData {
 
 interface ISelect {
   data: IData[]
+  placeholder: string
 }
 
-const Select = ({ data }: ISelect) => {
+const Select = ({ data, placeholder }: ISelect) => {
   const [value, setValue] = useState<string | null>(null)
 
   return (
@@ -32,7 +33,7 @@ const Select = ({ data }: ISelect) => {
       value={value}
       labelField='label'
       valueField='value'
-      placeholder='Select exercise'
+      placeholder={placeholder}
       onChange={(item) => {
         setValue(item.value)
       }}
