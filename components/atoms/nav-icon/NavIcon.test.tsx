@@ -1,7 +1,3 @@
-// Icon is visible.
-// Displays text.
-// State changes on click.
-// Color changes based on state.
 import React, { useState } from 'react'
 import NavIcon from './NavIcon'
 import { fireEvent, render, waitFor } from '@testing-library/react-native'
