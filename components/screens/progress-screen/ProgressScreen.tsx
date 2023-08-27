@@ -1,7 +1,8 @@
-import { View, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { Content } from '../../templates'
-import { Select, Title } from '../../atoms'
+import { Select, Selector, Title } from '../../atoms'
 import { primary } from '../../../assets/constants/colors'
+import ViewArea from '../../atoms/view-area/ViewArea'
 
 const data = [
   {
@@ -29,23 +30,20 @@ const data = [
 const ProgressScreen = (): JSX.Element => {
   return (
     <Content>
+      <Title type='h1'>Progress</Title>
+      <Select data={data} placeholder='Select exercise' />
+      <Title type='h2'>Max Weight Lifted</Title>
       <View
         style={{
-          width: '100%',
-          height: '90%'
+          marginVertical: 10,
+          borderBottomColor: primary,
+          borderBottomWidth: StyleSheet.hairlineWidth
         }}
-      >
-        <Title type='h1'>Progress</Title>
-        <Select data={data} placeholder='Select exercise' />
-        <Title type='h2'>Max Weight Lifted</Title>
-        <View
-          style={{
-            marginVertical: 10,
-            borderBottomColor: primary,
-            borderBottomWidth: StyleSheet.hairlineWidth
-          }}
-        />
-      </View>
+      />
+      <ViewArea>
+        <Text>Placeholder</Text>
+      </ViewArea>
+      <Selector size={24} quantity={3} color={primary} padding={10} />
     </Content>
   )
 }
