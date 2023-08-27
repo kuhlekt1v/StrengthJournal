@@ -16,13 +16,10 @@ const Content = ({ children }: IContent): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    width: '100%',
     paddingTop: 50,
-    paddingBottom: 10,
-    paddingLeft: 20,
-    paddingRight: 20,
-    backgroundColor: grey600
+    paddingHorizontal: 20,
+    backgroundColor: grey600,
+    flex: 1
   }
 })
 
