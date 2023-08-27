@@ -2,15 +2,20 @@ import { useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { NavIcon } from '../../atoms'
 import { grey700 } from '../../../assets/constants/colors'
+import { useNavigation } from '@react-navigation/native'
 
 const ScreenNav = (): JSX.Element => {
   const fontAwesome = 'FontAwesome' as const
   const fontAwesome5 = 'FontAwesome5' as const
 
   const [activeIndex, setActiveIndex] = useState(0)
+  const navigation = useNavigation()
 
-  const handleIconPress = (index: number): void => {
+  const handleIconPress = (index: number, text: string): void => {
     setActiveIndex(index)
+    // @ts-expect-error Unknown error.
+    // Text must match an existing NavigatorScreen.
+    navigation.navigate(text)
   }
 
   const icons = [
@@ -28,7 +33,7 @@ const ScreenNav = (): JSX.Element => {
           faIconName={icon.faIconName}
           text={icon.text}
           active={index === activeIndex}
-          handlePress={() => handleIconPress(index)}
+          handlePress={() => handleIconPress(index, icon.text)}
         />
       ))}
     </View>
