@@ -1,6 +1,7 @@
 import Content from './Content'
 import { Text } from 'react-native'
 import { render } from '@testing-library/react-native'
+import { grey600 } from '../../../assets/constants/colors'
 
 const renderContentComponent = () => {
   return render(
@@ -25,14 +26,10 @@ describe('Content template component', () => {
     expect(content).toBeTruthy()
 
     expect(content).toHaveStyle({
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '100%',
-      paddingTop: 10,
-      paddingBottom: 10,
-      paddingLeft: 20,
-      paddingRight: 20
+      paddingTop: 50,
+      paddingHorizontal: 20,
+      backgroundColor: grey600,
+      flex: 1
     })
   })
 })

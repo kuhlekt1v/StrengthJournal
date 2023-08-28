@@ -1,23 +1,39 @@
-import { StyleSheet, View } from 'react-native'
-import { grey600 } from './assets/constants/colors'
+import { View } from 'react-native'
 import WorkoutScreen from './components/screens/workout-screen/WorkoutScreen'
+import ProgressScreen from './components/screens/progress-screen/ProgressScreen'
+import SettingsScreen from './components/screens/settings-screen/SettingsScreen'
+
+import { ScreenNav } from './components/organisms'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+const Stack = createNativeStackNavigator()
 
 const App = (): JSX.Element => {
   return (
-    <View style={styles.container}>
-      <WorkoutScreen />
+    <View style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName='Progress'>
+          <Stack.Screen
+            name='Progress'
+            component={ProgressScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name='Workouts'
+            component={WorkoutScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name='Settings'
+            component={SettingsScreen}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+        <ScreenNav />
+      </NavigationContainer>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundColor: grey600
-  }
-})
 
 export default App

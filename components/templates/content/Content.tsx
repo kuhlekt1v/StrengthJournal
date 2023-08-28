@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native'
+import { grey600 } from '../../../assets/constants/colors'
 
 interface IContent {
   testID?: string
@@ -15,14 +16,10 @@ const Content = ({ children }: IContent): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    paddingTop: 10,
-    paddingBottom: 10,
-    paddingLeft: 20,
-    paddingRight: 20
+    paddingTop: 50,
+    paddingHorizontal: 20,
+    backgroundColor: grey600,
+    flex: 1
   }
 })
 

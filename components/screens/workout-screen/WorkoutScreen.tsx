@@ -1,18 +1,8 @@
-import { Text, View } from 'react-native'
-import { Content } from '../../templates'
-import { ScreenNav } from '../../organisms'
+import React from 'react'
+import { Text } from 'react-native'
 
-const WorkoutScreen = (): JSX.Element => {
-  return (
-    <>
-      <Content>
-        <View style={{ borderWidth: 1, borderColor: 'red', width: '100%' }}>
-          <Text>Main content area</Text>
-        </View>
-      </Content>
-      <ScreenNav />
-    </>
-  )
+const WorkoutScreen = () => {
+  return <Text>Workout screen</Text>
 }
 
 export default WorkoutScreen
