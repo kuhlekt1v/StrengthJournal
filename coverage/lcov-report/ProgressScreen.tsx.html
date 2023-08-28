@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Selector.tsx</title>
+    <title>Code coverage report for ProgressScreen.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> Selector.tsx</h1>
+        <h1><a href="index.html">All files</a> ProgressScreen.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -114,9 +114,24 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,25 +144,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,60 +165,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react'
-import { TouchableOpacity, View } from 'react-native'
-import { FontAwesome } from '@expo/vector-icons'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { View, Text, StyleSheet } from 'react-native'
+import { Content } from '../../templates'
+import { Select, Selector, Title } from '../../atoms'
+import { primary } from '../../../assets/constants/colors'
+import ViewArea from '../../atoms/view-area/ViewArea'
 &nbsp;
-interface ISelector {
-  size: number
-  quantity: number
-  color: string
-  padding: number
-  onSelect: (index: number) =&gt; void
-}
-&nbsp;
-const Selector = ({ size, quantity, color, padding, onSelect }: ISelector) =&gt; {
-  const [selected, setSelected] = useState&lt;number | null&gt;(0)
-&nbsp;
-  const handleCirclePress = (index: number) =&gt; {
-    selected === index ? <span class="branch-0 cbranch-no" title="branch not covered" >setSelected(null) </span>: setSelected(index)
-    onSelect(index)
+const data = [
+  {
+    label: 'Squat',
+    value: '1'
+  },
+  {
+    label: 'Bench',
+    value: '2'
+  },
+  {
+    label: 'Dead Lift',
+    value: '3'
+  },
+  {
+    label: 'Press',
+    value: '4'
+  },
+  {
+    label: 'Power Clean',
+    value: '5'
   }
+]
 &nbsp;
+const ProgressScreen = (): JSX.Element =&gt; {
   return (
-    &lt;View
-      style={{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center'
-      }}
-    &gt;
-      {Array.from({ length: quantity }, (_, index) =&gt; (
-        &lt;TouchableOpacity
-          key={index}
-          onPress={() =&gt; handleCirclePress(index)}
-          testID={`circle-${index}`}
-        &gt;
-          &lt;FontAwesome
-            key={index}
-            name={selected === index ? 'circle' : 'circle-thin'}
-            size={size}
-            color={color}
-            style={{ paddingHorizontal: padding }}
-            testID={
-              selected === index
-                ? `selected-circle-${index}`
-                : `deselected-circle-${index}`
-            }
-          /&gt;
-        &lt;/TouchableOpacity&gt;
-      ))}
-    &lt;/View&gt;
+    &lt;Content&gt;
+      &lt;Title type='h1'&gt;Progress&lt;/Title&gt;
+      &lt;Select data={data} placeholder='Select exercise' /&gt;
+      &lt;Title type='h2'&gt;Max Weight Lifted&lt;/Title&gt;
+      &lt;View
+        style={{
+          marginVertical: 10,
+          borderBottomColor: primary,
+          borderBottomWidth: StyleSheet.hairlineWidth
+        }}
+      /&gt;
+      &lt;ViewArea&gt;
+        &lt;Text&gt;Placeholder&lt;/Text&gt;
+      &lt;/ViewArea&gt;
+      &lt;Selector size={24} quantity={3} color={primary} padding={10} /&gt;
+    &lt;/Content&gt;
   )
 }
 &nbsp;
-export default Selector
+export default ProgressScreen
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -229,7 +223,7 @@ export default Selector
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-08-28T13:26:50.055Z
+                at 2023-08-27T12:54:04.488Z
             </div>
         <script src="prettify.js"></script>
         <script>

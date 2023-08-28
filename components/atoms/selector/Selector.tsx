@@ -7,13 +7,15 @@ interface ISelector {
   quantity: number
   color: string
   padding: number
+  onSelect: (index: number) => void
 }
 
-const Selector = ({ size, quantity, color, padding }: ISelector) => {
+const Selector = ({ size, quantity, color, padding, onSelect }: ISelector) => {
   const [selected, setSelected] = useState<number | null>(0)
 
   const handleCirclePress = (index: number) => {
     selected === index ? setSelected(null) : setSelected(index)
+    onSelect(index)
   }
 
   return (

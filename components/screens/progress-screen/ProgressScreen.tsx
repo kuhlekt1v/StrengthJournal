@@ -1,9 +1,11 @@
+import React, { useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Content } from '../../templates'
 import { Select, Selector, Title } from '../../atoms'
 import { primary } from '../../../assets/constants/colors'
 import ViewArea from '../../atoms/view-area/ViewArea'
 
+// Will eventually be fetched from database.
 const data = [
   {
     label: 'Squat',
@@ -27,7 +29,28 @@ const data = [
   }
 ]
 
+// Move to own components
+const Graph1 = () => (
+  <View>
+    <Text>Graph 1</Text>
+  </View>
+)
+
+const Graph2 = () => (
+  <View>
+    <Text>Graph 2</Text>
+  </View>
+)
+
+const graphComponents = [Graph1, Graph2]
+
 const ProgressScreen = (): JSX.Element => {
+  const [selectedGraphIndex, setSelectedGraphIndex] = useState<number>(0)
+
+  const handleGraphSelect = (index: number) => {
+    setSelectedGraphIndex(index)
+  }
+
   return (
     <Content>
       <Title type='h1'>Progress</Title>
@@ -40,10 +63,14 @@ const ProgressScreen = (): JSX.Element => {
           borderBottomWidth: StyleSheet.hairlineWidth
         }}
       />
-      <ViewArea>
-        <Text>Placeholder</Text>
-      </ViewArea>
-      <Selector size={24} quantity={3} color={primary} padding={10} />
+      <ViewArea>{graphComponents[selectedGraphIndex]()}</ViewArea>
+      <Selector
+        size={24}
+        quantity={graphComponents.length}
+        color={primary}
+        padding={10}
+        onSelect={handleGraphSelect}
+      />
     </Content>
   )
 }

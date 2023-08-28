@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import { primary } from '../../../assets/constants/colors'
 
 interface IViewArea {
-  children: React.ReactNode | null
+  children: React.JSX.Element | null
 }
 
 const ViewArea = ({ children }: IViewArea) => {

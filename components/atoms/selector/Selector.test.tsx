@@ -2,28 +2,34 @@ import Selector from './Selector'
 import { render, fireEvent } from '@testing-library/react-native'
 
 describe('Selector component', () => {
-  const testSelector = () => {
+  const testSelector = (onSelectMock: jest.Mock) => {
     return render(
-      <Selector size={20} quantity={3} color='black' padding={10} />
+      <Selector
+        size={20}
+        quantity={3}
+        color='black'
+        padding={10}
+        onSelect={onSelectMock}
+      />
     )
   }
 
   it('renders correct number of circles', () => {
-    const { queryAllByTestId } = testSelector()
+    const { queryAllByTestId } = testSelector(jest.fn())
 
     const circles = queryAllByTestId(/circle-\d+/)
     expect(circles.length).toBe(3)
   })
 
   it('has only one circle selected at time', () => {
-    const { getByTestId, getAllByTestId } = testSelector()
+    const { getByTestId, getAllByTestId } = testSelector(jest.fn())
 
     expect(getByTestId('selected-circle-0')).toBeTruthy()
     expect(getAllByTestId(/deselected-circle-\d+/).length).toBe(2)
   })
 
   it('toggles selection on press', () => {
-    const { getByTestId } = testSelector()
+    const { getByTestId } = testSelector(jest.fn())
 
     const circle0 = getByTestId('circle-0')
     const circle1 = getByTestId('circle-1')
