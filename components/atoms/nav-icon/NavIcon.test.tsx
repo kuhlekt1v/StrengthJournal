@@ -16,6 +16,7 @@ const TestComponent = () => {
       text='Test Icon'
       active={isActive}
       handlePress={handlePress}
+      testID='test-icon'
     />
   )
 }

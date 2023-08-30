@@ -7,29 +7,29 @@ import { ScreenNav } from './components/organisms'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-const Stack = createNativeStackNavigator()
+const { Screen, Navigator } = createNativeStackNavigator()
 
 const App = (): JSX.Element => {
   return (
     <View style={{ flex: 1 }}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Progress'>
-          <Stack.Screen
+        <Navigator initialRouteName='Progress'>
+          <Screen
             name='Progress'
             component={ProgressScreen}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
+          <Screen
             name='Workouts'
             component={WorkoutScreen}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
+          <Screen
             name='Settings'
             component={SettingsScreen}
             options={{ headerShown: false }}
           />
-        </Stack.Navigator>
+        </Navigator>
         <ScreenNav />
       </NavigationContainer>
     </View>
