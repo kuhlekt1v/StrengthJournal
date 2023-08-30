@@ -7,6 +7,7 @@ interface INavIcon {
   faIconName: string
   active: boolean
   text: string
+  testID: string
   handlePress: () => void
 }
 
@@ -15,7 +16,8 @@ const NavIcon = ({
   faIconName,
   active,
   text,
-  handlePress
+  handlePress,
+  testID
 }: INavIcon): JSX.Element => {
   const IconComponent = iconPack === 'FontAwesome' ? FontAwesome : FontAwesome5
   return (
@@ -31,7 +33,9 @@ const NavIcon = ({
           color={active ? primary : grey500}
           testID='icon-component'
         />
-        <Text style={{ color: active ? primary : grey500 }}>{text}</Text>
+        <Text style={{ color: active ? primary : grey500 }} testID={testID}>
+          {text}
+        </Text>
       </View>
     </TouchableWithoutFeedback>
   )

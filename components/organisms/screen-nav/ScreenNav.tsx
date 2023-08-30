@@ -19,9 +19,24 @@ const ScreenNav = (): JSX.Element => {
   }
 
   const icons = [
-    { iconPack: fontAwesome, faIconName: 'line-chart', text: 'Progress' },
-    { iconPack: fontAwesome5, faIconName: 'dumbbell', text: 'Workouts' },
-    { iconPack: fontAwesome, faIconName: 'gear', text: 'Settings' }
+    {
+      iconPack: fontAwesome,
+      faIconName: 'line-chart',
+      text: 'Progress',
+      testID: 'Progress-ID'
+    },
+    {
+      iconPack: fontAwesome5,
+      faIconName: 'dumbbell',
+      text: 'Workouts',
+      testID: 'Workouts-ID'
+    },
+    {
+      iconPack: fontAwesome,
+      faIconName: 'gear',
+      text: 'Settings',
+      testID: 'Settings-ID'
+    }
   ]
 
   return (
@@ -34,6 +49,7 @@ const ScreenNav = (): JSX.Element => {
           text={icon.text}
           active={index === activeIndex}
           handlePress={() => handleIconPress(index, icon.text)}
+          testID={icon.testID}
         />
       ))}
     </View>
