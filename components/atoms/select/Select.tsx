@@ -8,11 +8,7 @@ import {
   primary,
   secondary
 } from '../../../assets/constants/colors'
-
-interface IData {
-  label: string
-  value: string
-}
+import type { IData } from '../../../types/IData'
 
 interface ISelect {
   data: IData[]
