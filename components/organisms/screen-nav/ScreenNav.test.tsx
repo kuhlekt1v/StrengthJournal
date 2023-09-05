@@ -25,6 +25,10 @@ jest.mock('@react-navigation/native', () => {
 })
 
 describe('ScreenNav component', () => {
+  beforeEach(() => {
+    jest.useFakeTimers()
+  })
+
   it('changes active index & navigates on press', async () => {
     const { getByTestId } = render(
       <NavigationContainer>

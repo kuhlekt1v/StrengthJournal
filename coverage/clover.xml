@@ -1,120 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1693916607976" clover="3.2.0">
-  <project timestamp="1693916607977" name="All files">
-    <metrics statements="124" coveredstatements="95" conditionals="28" coveredconditionals="22" methods="43" coveredmethods="25" elements="195" coveredelements="142" complexity="0" loc="124" ncloc="124" packages="18" files="19" classes="19"/>
-    <package name="StrengthJournal2">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="App.tsx" path="/home/ghost/Coding/StrengthJournal2/App.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="StrengthJournal2.assets.constants">
+<coverage generated="1693916886114" clover="3.2.0">
+  <project timestamp="1693916886114" name="All files">
+    <metrics statements="119" coveredstatements="84" conditionals="28" coveredconditionals="18" methods="41" coveredmethods="19" elements="188" coveredelements="121" complexity="0" loc="119" ncloc="119" packages="16" files="17" classes="17"/>
+    <package name="assets.constants">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="colors.ts" path="/home/ghost/Coding/StrengthJournal2/assets/constants/colors.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="7" count="7" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.atoms">
+    <package name="components.atoms">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/home/ghost/Coding/StrengthJournal2/components/atoms/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.atoms.nav-icon">
+    <package name="components.atoms.nav-icon">
       <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
       <file name="NavIcon.tsx" path="/home/ghost/Coding/StrengthJournal2/components/atoms/nav-icon/NavIcon.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="22" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="23" count="15" type="stmt"/>
-        <line num="44" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="22" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="9" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.atoms.select">
-      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+    <package name="components.atoms.select">
+      <metrics statements="8" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1"/>
       <file name="Select.tsx" path="/home/ghost/Coding/StrengthJournal2/components/atoms/select/Select.tsx">
-        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="23" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="4" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="46" count="3" type="stmt"/>
+        <metrics statements="8" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.atoms.selector">
-      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="4"/>
+    <package name="components.atoms.selector">
+      <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="4" methods="4" coveredmethods="2"/>
       <file name="Selector.tsx" path="/home/ghost/Coding/StrengthJournal2/components/atoms/selector/Selector.tsx">
-        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="4"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="7" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
-        <line num="17" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="21" count="7" type="stmt"/>
-        <line num="30" count="20" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
+        <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="4" methods="4" coveredmethods="2"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.atoms.title">
+    <package name="components.atoms.title">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="Title.tsx" path="/home/ghost/Coding/StrengthJournal2/components/atoms/title/Title.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.atoms.view-area">
+    <package name="components.atoms.view-area">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="ViewArea.tsx" path="/home/ghost/Coding/StrengthJournal2/components/atoms/view-area/ViewArea.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.organisms">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="/home/ghost/Coding/StrengthJournal2/components/organisms/index.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-    </package>
-    <package name="StrengthJournal2.components.organisms.screen-nav">
+    <package name="components.organisms.screen-nav">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="ScreenNav.tsx" path="/home/ghost/Coding/StrengthJournal2/components/organisms/screen-nav/ScreenNav.tsx">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="42" count="4" type="stmt"/>
-        <line num="45" count="12" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="45" count="9" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="59" count="2" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.screens.progress-screen">
+    <package name="components.screens.progress-screen">
       <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="2"/>
       <file name="ProgressScreen.tsx" path="/home/ghost/Coding/StrengthJournal2/components/screens/progress-screen/ProgressScreen.tsx">
         <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="2"/>
@@ -133,7 +116,7 @@
         <line num="65" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.screens.settings-screen">
+    <package name="components.screens.settings-screen">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="SettingsScreen.tsx" path="/home/ghost/Coding/StrengthJournal2/components/screens/settings-screen/SettingsScreen.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -141,7 +124,7 @@
         <line num="5" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.screens.workout-screen">
+    <package name="components.screens.workout-screen">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="WorkoutScreen.tsx" path="/home/ghost/Coding/StrengthJournal2/components/screens/workout-screen/WorkoutScreen.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -149,22 +132,22 @@
         <line num="5" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.templates">
+    <package name="components.templates">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/home/ghost/Coding/StrengthJournal2/components/templates/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.templates.content">
+    <package name="components.templates.content">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Content.tsx" path="/home/ghost/Coding/StrengthJournal2/components/templates/content/Content.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.components.templates.header">
+    <package name="components.templates.header">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="Header.tsx" path="/home/ghost/Coding/StrengthJournal2/components/templates/header/Header.tsx">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -173,7 +156,7 @@
         <line num="11" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.hooks">
+    <package name="hooks">
       <metrics statements="16" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="useDatabaseQuery.ts" path="/home/ghost/Coding/StrengthJournal2/hooks/useDatabaseQuery.ts">
         <metrics statements="16" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -195,8 +178,8 @@
         <line num="33" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="StrengthJournal2.utils">
-      <metrics statements="33" coveredstatements="15" conditionals="4" coveredconditionals="1" methods="16" coveredmethods="4"/>
+    <package name="utils">
+      <metrics statements="33" coveredstatements="13" conditionals="4" coveredconditionals="1" methods="16" coveredmethods="3"/>
       <file name="apiService.ts" path="/home/ghost/Coding/StrengthJournal2/utils/apiService.ts">
         <metrics statements="9" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="2"/>
         <line num="5" count="1" type="stmt"/>
@@ -210,7 +193,7 @@
         <line num="20" count="0" type="stmt"/>
       </file>
       <file name="dbService.ts" path="/home/ghost/Coding/StrengthJournal2/utils/dbService.ts">
-        <metrics statements="24" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="2"/>
+        <metrics statements="24" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="1"/>
         <line num="10" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
@@ -229,8 +212,8 @@
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
         <line num="66" count="0" type="stmt"/>

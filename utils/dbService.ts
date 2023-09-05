@@ -1,4 +1,9 @@
-import type { SQLTransaction, SQLError, SQLResultSet } from 'expo-sqlite'
+import type {
+  SQLTransaction,
+  SQLError,
+  SQLResultSet,
+  SQLiteDatabase
+} from 'expo-sqlite'
 import { openDatabase } from 'expo-sqlite'
 import type { IExercise } from '../types/IExercise'
 
@@ -11,13 +16,12 @@ const seedData: IExercise[] = [
 export const databaseName: string = 'strengthJournal'
 
 // Add error handling view - Issue #50.
-export const database = () => {
+export const database = (): SQLiteDatabase | Error => {
   try {
     const db = openDatabase(databaseName)
     return db
   } catch (error) {
-    console.error('Error initializing database:', error)
-    return null // or throw an error as needed
+    return new Error('Failed to initialize database')
   }
 }
 
