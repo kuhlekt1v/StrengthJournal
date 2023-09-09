@@ -4,17 +4,17 @@ import { primary } from '../../../assets/constants/colors'
 
 interface IText {
   children: string
+  color?: string
   type: 'h1' | 'h2'
 }
 
-const Title = ({ children, type }: IText) => {
+const Title = ({ children, type, color = primary }: IText) => {
   const titleStyle = type === 'h1' ? styles.h1 : styles.h2
-  return <Text style={[styles.base, titleStyle]}>{children}</Text>
+  return <Text style={[styles.base, { color }, titleStyle]}>{children}</Text>
 }
 
 const styles = StyleSheet.create({
   base: {
-    color: primary,
     marginVertical: 10
   },
 

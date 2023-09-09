@@ -1,38 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Content } from '../../templates'
 import { Select, Selector, Title } from '../../atoms'
 import { primary } from '../../../assets/constants/colors'
 import ViewArea from '../../atoms/view-area/ViewArea'
-import { SQLResultSet, openDatabase } from 'expo-sqlite'
-import { databaseName } from '../../../utils/dbService'
-import type { IData } from '../../../types/IData'
-import { GET_ALL } from '../../../utils/apiService'
 import useDatabaseQuery from '../../../hooks/useDatabaseQuery'
 
-// Will eventually be fetched from database.
-const data = [
-  {
-    label: 'Squat',
-    value: '1'
-  },
-  {
-    label: 'Bench',
-    value: '2'
-  },
-  {
-    label: 'Dead Lift',
-    value: '3'
-  },
-  {
-    label: 'Press',
-    value: '4'
-  },
-  {
-    label: 'Power Clean',
-    value: '5'
-  }
-]
+import type { IData } from '../../../types/IData'
 
 // Move to own components
 const Graph1 = () => (

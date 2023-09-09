@@ -52,19 +52,27 @@ const seedDatabase = (): void => {
   })
 }
 
-export const initializeDatabase = (): void => {
-  const db = openDatabase(databaseName)
-
-  db.transaction((tx) => {
-    tx.executeSql(
-      'create table if not exists exercise (id INTEGER PRIMARY KEY AUtOINCREMENT, description TEXT);',
-      [],
-      () => {
-        seedDatabase()
+export const initializeDatabase = (): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const db = openDatabase(databaseName)
+    db.transaction(
+      (tx) => {
+        tx.executeSql(
+          'create table if not exists exercise (id INTEGER PRIMARY KEY AUtOINCREMENT, description TEXT);',
+          [],
+          () => {
+            seedDatabase()
+            resolve()
+          },
+          (_: SQLTransaction, error: SQLError) => {
+            console.log(error)
+            reject(error)
+            return false
+          }
+        )
       },
-      (_: SQLTransaction, error: SQLError) => {
-        console.log(error.message)
-        return false
+      (error) => {
+        reject(error)
       }
     )
   })
