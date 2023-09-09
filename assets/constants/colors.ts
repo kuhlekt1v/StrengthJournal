@@ -5,3 +5,13 @@ export const grey700 = '#101828'
 export const grey600 = '#667085'
 export const grey500 = '#98A2B3'
 export const grey400 = '#D0D5DD'
+
+// Alert colors
+export const errorLight = '#FDEDED'
+export const errorDark = '#692D2C'
+export const warningLight = '#FFF4E5'
+export const warningDark = '#683E03'
+export const infoLight = '#E5F6FD'
+export const infoDark = '#054664'
+export const successLight = '#EDF7ED'
+export const successDark = '#418944'
